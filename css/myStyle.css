@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /*background: #ccffff;*/
+  /*color: #ffffcc;*/
+  font: 18px '宋体';
+  width: 1000px;
+  margin: 10px auto;
+}
+
+strong {
+  color: red;
+}
