@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>函数的定义</title>
+  <script type="text/javascript">
+    //输出对象的key : value
+  function printProps(o) {
+    for(var p in o) {
+      console.log(p + " : " + o[p] + "\n");
+    }
+  }
+  printProps({name: "elvin", age: 22});
+
+//计算两个点之间的距离
+  function distance(x1, y1, x2, y2) {
+    var dx = x2 - x1;
+    var dy = y2 - y1;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+  console.log("两点之间的距离为: " + distance(0, 0, 3, 4));
+
+  //计算阶乘的递归函数（调用自身的函数）
+  //x!的值是从x到x递减（步长为1）的值的累乘
+  function factorial(x) {
+    if(x <= 1)
+      return 1;
+    return x * factorial(x - 1);
+  }
+console.log("3的阶乘为: " + factorial(3));
+
+//开平方
+  var square = function(x) {
+    return x * x;
+  };
+  console.log("2的平方:" + square(2));
+
+//函数表达式也可以作为参数传给其他函数
+  var f = function fact(x) {
+    if(x <= 1)
+      return 1;
+    else
+      return x * fact(x - 1);
+  };
+
+  console.log("3的阶乘为: " + f(3));
+
+//链式调用
+var data = [1, 2, 9, 4, ];
+  data.sort(function(a, b) {
+    return a - b;
+  }).sort(function(a, b) {
+    return b - a;
+  });
+  console.log("排序: " , data);
+
+  //定义后立即调用
+  var tensquared = (function(x) {
+    return x * x;
+  }(10));
+
+  document.writeln(tensquared);
+</script>
+</head>
+<body></body>
+</html>
