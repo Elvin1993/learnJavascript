@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>语句</title>
+	<script>
+	//switch 使用的是=== 判断
+		var str = '1';
+		switch(str) {
+			case 1: 
+				console.log('is number 1');
+			break;
+			case '1': 
+				console.log('is string "1"');
+			break;
+			default:
+				console.log("other");
+			break;
+		}
+
+	//for loop 判断条件只会以最后一个为准
+	for(var i=j=0; j< 3, j< 10, i < 2; i++, j++) {
+		console.log(j);
+	}
+
+	// for in 
+	var o={name: 1, age: 2};
+	var a = [], i=0;
+	for(a[i++] in o);
+		console.log(a);
+	delete o.age;
+	for(value in o)
+		console.info(value);
+	
+	// if(true) {
+	// 	throw "123";
+	// }
+
+	//标签
+	var str = prompt('please input a string', '1234567890');
+	my_label: {
+		if(str && str.length < 10) {
+			break my_label;
+		}
+		str = str.substr(str.length-10);
+	}
+	// alert(str);
+	 for(var j = 0; j < 5; j++) {
+	 	if(j == 2) continue;
+	 	console.log("loop:" + j );
+	 }
+
+	 document.write("Entering the loop!<br /> ");
+outerloop:   // This is the label name
+for (var i = 0; i < 3; i++)
+{
+   document.write("Outerloop: " + i + "<br />");
+   for (var j = 0; j < 5; j++)
+   {
+      if (j == 3){
+         continue outerloop;
+      }
+      document.write("Innerloop: " + j + "<br />");
+   }
+}
+document.write("Exiting the loop!<br /> ");
+throw new Error("dddd");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
